@@ -68,6 +68,6 @@ export const pages: Page[] = [
 ];
 
 export const ui = {
-  fr: { brand: 'Visiter Sercq', other: 'English', lang: 'fr-FR', more: 'Pour en savoir plus', carriages: 'Calèches de Sercq', info: "SimplySark : l'actualité de l'île" },
-  en: { brand: 'Visit Sark', other: 'Français', lang: 'en-GB', more: 'More information', carriages: 'Sark Carriages', info: 'SimplySark: news from the island' },
+  fr: { brand: 'Visiter Sercq', other: 'English', lang: 'fr-FR', more: 'Pour en savoir plus', alt: 'Calèche tirée par un cheval sur un chemin fleuri de Sercq', carriages: 'Calèches de Sercq', info: "SimplySark : l'actualité de l'île", infoUrl: 'https://www.simplysark.co.uk/fr/' },
+  en: { brand: 'Visit Sark', other: 'Français', lang: 'en-GB', more: 'More information', alt: 'Horse-drawn carriage on a flowery lane on Sark', carriages: 'Sark Carriages', info: 'SimplySark: Island news', infoUrl: 'https://www.simplysark.co.uk/' },
 };
