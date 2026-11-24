@@ -1,0 +1,70 @@
+---
+import { pages, ui } from '../content';
+export function getStaticPaths() {
+  return pages.map((p) => ({ params: { slug: p.path || undefined }, props: { p } }));
+}
+const { p } = Astro.props;
+const href = (x: (typeof pages)[number]) => '/' + x.path + (x.path ? '/' : '');
+const abs = (x: (typeof pages)[number]) => new URL(href(x), Astro.site).href;
+const fr = pages.find((x) => x.key === p.key && x.lang === 'fr')!;
+const en = pages.find((x) => x.key === p.key && x.lang === 'en')!;
+const other = p.lang === 'fr' ? en : fr;
+const nav = pages.filter((x) => x.lang === p.lang);
+const t = ui[p.lang];
+---
+<!doctype html>
+<html lang={p.lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{p.title}</title>
+  <meta name="description" content={p.desc} />
+  <link rel="canonical" href={abs(p)} />
+  <link rel="alternate" hreflang="fr" href={abs(fr)} />
+  <link rel="alternate" hreflang="en" href={abs(en)} />
+  <link rel="alternate" hreflang="x-default" href={abs(fr)} />
+  <meta property="og:title" content={p.title} />
+  <meta property="og:description" content={p.desc} />
+  <meta property="og:locale" content={t.lang.replace('-', '_')} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <a class="brand" href={href(nav[0])}>{t.brand}</a>
+    <nav aria-label="Menu">
+      {nav.slice(1).map((x) => <a href={href(x)} aria-current={x.key === p.key ? 'page' : undefined}>{x.nav}</a>)}
+      <a href={href(other)} hreflang={other.lang} lang={other.lang}>{t.other}</a>
+    </nav>
+  </header>
+  <main>
+    <h1>{p.h1}</h1>
+    <p class="lead">{p.lead}</p>
+    {p.sections.map((s) => (
+      <section><h2>{s.h}</h2><p>{s.p}</p></section>
+    ))}
+  </main>
+  <footer>© {new Date().getFullYear()} {t.brand}</footer>
+</body>
+</html>
+<style is:global>
+  :root { --ink:#1d2a30; --sea:#1f5a6b; --mist:#e8f0ef; --gorse:#e6b422; --granite:#5c656a; }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 4rem; }
+  body { margin:0; background:var(--mist); color:var(--ink); font:1.125rem/1.65 'Source Serif 4', Georgia, serif; border-top:.5rem solid var(--gorse); }
+  a { color:var(--sea); text-underline-offset:.2em; }
+  a:focus-visible { outline:3px solid var(--gorse); outline-offset:3px; }
+  header, main, footer { width:min(100% - 2.5rem, 70rem); margin-inline:auto; }
+  header { display:flex; flex-wrap:wrap; gap:.75rem 2rem; justify-content:space-between; align-items:baseline; padding-block:1.25rem; }
+  .brand { font:800 1.25rem 'Bricolage Grotesque', sans-serif; color:var(--ink); text-decoration:none; }
+  nav { display:flex; flex-wrap:wrap; gap:.25rem 1.5rem; font-size:1rem; }
+  nav a[aria-current] { color:var(--ink); font-weight:600; }
+  h1 { font:800 clamp(2.6rem, 9vw, 6.5rem)/.98 'Bricolage Grotesque', sans-serif; letter-spacing:-.03em; margin:clamp(2rem,8vw,5rem) 0 1.5rem; max-width:14ch; text-wrap:balance; }
+  .lead { font-size:1.3rem; max-width:44rem; margin:0 0 clamp(2.5rem,7vw,5rem); color:var(--granite); }
+  section { display:grid; gap:.5rem 3rem; padding-block:1.75rem; border-top:1px solid #1d2a3033; }
+  h2 { font:500 1.4rem/1.2 'Bricolage Grotesque', sans-serif; margin:0; }
+  section p { margin:0; max-width:40rem; }
+  @media (min-width:48rem) { section { grid-template-columns:16rem 1fr; } }
+  footer { padding-block:3rem; font-size:.95rem; color:var(--granite); }
+</style>

@@ -1,0 +1,73 @@
+export type Page = { key: string; lang: 'fr' | 'en'; path: string; nav: string; title: string; desc: string; h1: string; lead: string; sections: { h: string; p: string }[] };
+
+export const pages: Page[] = [
+  { key: 'home', lang: 'fr', path: '', nav: 'Accueil',
+    title: "Visiter Sercq : l'île sans voitures des îles Anglo-Normandes",
+    desc: "Préparez votre séjour à Sercq, près de Guernesey : accès, balades, calèche, vélo, ciel étoilé et sentiers côtiers.",
+    h1: "Sercq, l'île sans voitures",
+    lead: "À moins d'une heure de bateau de Guernesey, Sercq est l'une des plus petites îles anglo-normandes. On s'y déplace à pied, à vélo ou en calèche, et le ciel y est l'un des plus noirs d'Europe.",
+    sections: [
+      { h: 'Pourquoi venir', p: "Falaises, criques, jardins et chemins creux : l'île se découvre au rythme des sabots et des vagues. Pas de voitures, très peu de bruit, et une vraie vie de village à l'arrivée." },
+      { h: 'Se déplacer', p: "Tout se fait sans moteur privé : marche, location de vélos, ou tour de l'île en calèche. Comptez une journée pour faire le tour des grands points de vue." },
+      { h: 'Combien de temps rester', p: "Une journée suffit pour un premier aperçu. Pour les étoiles, les sentiers côtiers et le calme du soir, une ou deux nuits changent tout." },
+    ] },
+  { key: 'getting', lang: 'fr', path: 'venir', nav: 'Venir à Sercq',
+    title: 'Comment aller à Sercq depuis la France et Guernesey',
+    desc: "Venir à Sercq : ferry depuis Guernesey, correspondances depuis Saint-Malo et la Normandie, arrivée au port et trajet jusqu'au village.",
+    h1: 'Venir à Sercq',
+    lead: "On rejoint Sercq par bateau, presque toujours via Guernesey.",
+    sections: [
+      { h: 'Depuis la France', p: "Depuis Saint-Malo ou la Normandie, rejoignez Guernesey en ferry ou en avion. Des liaisons saisonnières directes existent selon les années : vérifiez les compagnies avant de réserver." },
+      { h: 'De Guernesey à Sercq', p: "Le bateau met environ 45 à 55 minutes. Les horaires changent selon la saison et la météo : consultez-les à l'avance et gardez de la marge pour le retour." },
+      { h: "À l'arrivée", p: "Le bateau accoste au port de Maseline. Un tracteur avec remorque monte les visiteurs jusqu'au village, le point de départ des balades, des vélos et des calèches." },
+    ] },
+  { key: 'todo', lang: 'fr', path: 'a-faire', nav: 'À faire',
+    title: 'Que faire à Sercq : balades, calèche, plages et étoiles',
+    desc: "Les incontournables de Sercq : La Coupée, tour en calèche, vélo, criques, grottes de Gouliot, jardins de La Seigneurie et observation des étoiles.",
+    h1: 'Que faire à Sercq',
+    lead: 'Quelques idées pour remplir une journée, ou deux.',
+    sections: [
+      { h: 'À pied et à vélo', p: "La Coupée, étroite crête reliant Grande et Petite Sercq, offre l'un des plus beaux panoramas. Les chemins sont plats au centre, plus raides vers les criques." },
+      { h: 'En calèche', p: "Le tour de l'île en calèche est le moyen le plus simple de tout voir sans fatigue. Réservez à l'avance en haute saison." },
+      { h: 'Criques et grottes', p: "Port du Moulin et les grottes de Gouliot sont à voir à marée basse. Vérifiez les horaires des marées avant de descendre." },
+      { h: 'Jardins de La Seigneurie', p: "Des jardins clos abrités du vent, parfaits pour une pause au milieu d'une journée de marche." },
+      { h: 'Le ciel étoilé', p: "Sercq a été la première île au monde labellisée Dark Sky. Par temps dégagé, la Voie lactée se voit à l'œil nu." },
+    ] },
+  { key: 'home', lang: 'en', path: 'en', nav: 'Home',
+    title: 'Visit Sark: the car-free Channel Island',
+    desc: 'Plan your stay on Sark, near Guernsey: how to get here, walks, horse-drawn carriages, cycling, dark skies and coastal paths.',
+    h1: 'Sark, the island without cars',
+    lead: "Under an hour by boat from Guernsey, Sark is one of the smallest Channel Islands. You get around on foot, by bike or by carriage, and the night sky is among the darkest in Europe.",
+    sections: [
+      { h: 'Why visit', p: 'Cliffs, coves, gardens and sunken lanes: the island is best explored at the pace of hooves and waves. No cars, very little noise, and a real village life on arrival.' },
+      { h: 'Getting around', p: 'Everything runs without private motors: walk, hire a bike, or take a carriage tour of the island. Allow a day to cover the main viewpoints.' },
+      { h: 'How long to stay', p: 'A day trip gives you a first taste. For the stars, the coastal paths and the quiet evenings, one or two nights change everything.' },
+    ] },
+  { key: 'getting', lang: 'en', path: 'en/getting-there', nav: 'Getting there',
+    title: 'How to get to Sark from France and Guernsey',
+    desc: 'Getting to Sark: ferry from Guernsey, connections from Saint-Malo and Normandy, arriving at the harbour and the ride up to the village.',
+    h1: 'Getting to Sark',
+    lead: 'Sark is reached by boat, almost always via Guernsey.',
+    sections: [
+      { h: 'From France', p: 'From Saint-Malo or Normandy, reach Guernsey by ferry or plane. Direct seasonal sailings exist in some years, so check with the operators before booking.' },
+      { h: 'From Guernsey to Sark', p: 'The crossing takes roughly 45 to 55 minutes. Timetables change with the season and the weather, so check ahead and leave slack for your return.' },
+      { h: 'On arrival', p: 'Boats dock at Maseline Harbour. A tractor-drawn trailer takes visitors up to the village, the starting point for walks, bikes and carriages.' },
+    ] },
+  { key: 'todo', lang: 'en', path: 'en/things-to-do', nav: 'Things to do',
+    title: 'Things to do on Sark: walks, carriages, coves and stars',
+    desc: 'Sark highlights: La Coupée, carriage tours, cycling, coves, the Gouliot caves, La Seigneurie gardens and stargazing.',
+    h1: 'Things to do on Sark',
+    lead: 'A few ideas to fill a day, or two.',
+    sections: [
+      { h: 'On foot and by bike', p: 'La Coupée, the narrow ridge joining Greater and Little Sark, is one of the best views on the island. Paths are flat in the centre and steeper near the coves.' },
+      { h: 'By carriage', p: 'A carriage tour is the easiest way to see everything without tiring. Book ahead in high season.' },
+      { h: 'Coves and caves', p: 'Port du Moulin and the Gouliot caves are best at low tide. Check tide times before heading down.' },
+      { h: 'La Seigneurie gardens', p: 'Walled gardens sheltered from the wind, ideal for a pause in the middle of a day of walking.' },
+      { h: 'Dark skies', p: 'Sark was the first island in the world designated a Dark Sky community. On clear nights the Milky Way is visible to the naked eye.' },
+    ] },
+];
+
+export const ui = {
+  fr: { brand: 'Visiter Sercq', other: 'English', lang: 'fr-FR' },
+  en: { brand: 'Visit Sark', other: 'Français', lang: 'en-GB' },
+};

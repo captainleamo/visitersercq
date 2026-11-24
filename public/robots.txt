@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://visitersercq.com/sitemap-index.xml
