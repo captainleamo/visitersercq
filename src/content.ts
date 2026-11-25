@@ -1,4 +1,4 @@
-export type Page = { key: string; lang: 'fr' | 'en'; path: string; nav: string; title: string; desc: string; h1: string; lead: string; sections: { h: string; p: string; img?: { src: string; alt: string; w: number; h: number }; link?: { href: string; label: string } }[] };
+export type Page = { hero?: { src: string; alt: string; w: number; h: number; pos: string }; key: string; lang: 'fr' | 'en'; path: string; nav: string; title: string; desc: string; h1: string; lead: string; sections: { h: string; p: string; img?: { src: string; alt: string; w: number; h: number }; link?: { href: string; label: string } }[] };
 
 export const pages: Page[] = [
   { key: 'home', lang: 'fr', path: '', nav: 'Accueil',
@@ -21,7 +21,7 @@ export const pages: Page[] = [
       { h: 'De Guernesey à Sercq', p: "Le bateau met environ 45 à 55 minutes. Les horaires changent selon la saison et la météo : consultez-les à l'avance et gardez de la marge pour le retour.", img: { src: '/sark-shipping.webp', alt: "Le Corsaire de Sercq, bateau d'Isle of Sark Shipping, le long du quai", w: 1200, h: 650 }, link: { href: 'https://www.sarkshipping.gg/', label: 'Isle of Sark Shipping : horaires et billets' } },
       { h: "À l'arrivée", p: "Le bateau accoste au port de Maseline. Un tracteur avec remorque monte les visiteurs jusqu'au village, le point de départ des balades, des vélos et des calèches." },
     ] },
-  { key: 'todo', lang: 'fr', path: 'a-faire', nav: 'À faire',
+  { key: 'todo', lang: 'fr', path: 'a-faire', hero: { src: '/sark-walks.webp', alt: "Deux randonneurs sur un sentier de sous-bois couvert de jacinthes des bois à Sercq", w: 1800, h: 750, pos: '85% 50%' },  nav: 'À faire',
     title: 'Que faire à Sercq : balades, calèche, plages et étoiles',
     desc: "Les incontournables de Sercq : La Coupée, tour en calèche, vélo, criques, grottes de Gouliot, jardins de La Seigneurie et observation des étoiles.",
     h1: 'Que faire à Sercq',
@@ -53,7 +53,7 @@ export const pages: Page[] = [
       { h: 'From Guernsey to Sark', p: 'The crossing takes roughly 45 to 55 minutes. Timetables change with the season and the weather, so check ahead and leave slack for your return.', img: { src: '/sark-shipping.webp', alt: 'The Corsaire de Sercq, an Isle of Sark Shipping boat, alongside the quay', w: 1200, h: 650 }, link: { href: 'https://www.sarkshipping.gg/', label: 'Isle of Sark Shipping: timetables and tickets' } },
       { h: 'On arrival', p: 'Boats dock at Maseline Harbour. A tractor-drawn trailer takes visitors up to the village, the starting point for walks, bikes and carriages.' },
     ] },
-  { key: 'todo', lang: 'en', path: 'en/things-to-do', nav: 'Things to do',
+  { key: 'todo', lang: 'en', path: 'en/things-to-do', hero: { src: '/sark-walks.webp', alt: 'Two walkers on a woodland path carpeted with bluebells on Sark', w: 1800, h: 750, pos: '85% 50%' },  nav: 'Things to do',
     title: 'Things to do on Sark: walks, carriages, coves and stars',
     desc: 'Sark highlights: La Coupée, carriage tours, cycling, coves, the Gouliot caves, La Seigneurie gardens and stargazing.',
     h1: 'Things to do on Sark',

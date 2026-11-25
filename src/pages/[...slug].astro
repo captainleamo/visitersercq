@@ -11,6 +11,7 @@ const en = pages.find((x) => x.key === p.key && x.lang === 'en')!;
 const other = p.lang === 'fr' ? en : fr;
 const nav = pages.filter((x) => x.lang === p.lang);
 const t = ui[p.lang];
+const hero = p.hero ?? { src: '/sark-carriage.webp', alt: t.alt, w: 1800, h: 750, pos: '60% 50%' };
 ---
 <!doctype html>
 <html lang={p.lang}>
@@ -25,7 +26,7 @@ const t = ui[p.lang];
   <link rel="alternate" hreflang="x-default" href={abs(fr)} />
   <meta property="og:title" content={p.title} />
   <meta property="og:description" content={p.desc} />
-  <meta property="og:image" content={new URL("/sark-carriage.webp", Astro.site).href} />
+  <meta property="og:image" content={new URL(hero.src, Astro.site).href} />
   <meta property="og:locale" content={t.lang.replace('-', '_')} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +40,7 @@ const t = ui[p.lang];
       <a href={href(other)} hreflang={other.lang} lang={other.lang}>{t.other}</a>
     </nav>
   </header>
-  <img class="hero" src="/sark-carriage.webp" alt={t.alt} width="1800" height="750" fetchpriority="high" />
+  <img class="hero" src={hero.src} alt={hero.alt} width={hero.w} height={hero.h} style={`object-position:${hero.pos}`} fetchpriority="high" />
   <main>
     <h1>{p.h1}</h1>
     <p class="lead">{p.lead}</p>
