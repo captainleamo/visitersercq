@@ -1,4 +1,4 @@
-export type Page = { key: string; lang: 'fr' | 'en'; path: string; nav: string; title: string; desc: string; h1: string; lead: string; sections: { h: string; p: string; img?: { src: string; alt: string; w: number; h: number } }[] };
+export type Page = { key: string; lang: 'fr' | 'en'; path: string; nav: string; title: string; desc: string; h1: string; lead: string; sections: { h: string; p: string; img?: { src: string; alt: string; w: number; h: number }; link?: { href: string; label: string } }[] };
 
 export const pages: Page[] = [
   { key: 'home', lang: 'fr', path: '', nav: 'Accueil',
@@ -17,8 +17,8 @@ export const pages: Page[] = [
     h1: 'Venir à Sercq',
     lead: "On rejoint Sercq par bateau, presque toujours via Guernesey.",
     sections: [
-      { h: 'Depuis la France', p: "Depuis Saint-Malo ou la Normandie, rejoignez Guernesey en ferry ou en avion. Des liaisons saisonnières directes existent selon les années : vérifiez les compagnies avant de réserver.", img: { src: '/brittany-ferries-guernsey.webp', alt: "Le ferry rapide Brittany Ferries Voyager arrivant à Saint-Pierre-Port, à Guernesey", w: 1200, h: 650 } },
-      { h: 'De Guernesey à Sercq', p: "Le bateau met environ 45 à 55 minutes. Les horaires changent selon la saison et la météo : consultez-les à l'avance et gardez de la marge pour le retour." },
+      { h: 'Depuis la France', p: "Depuis Saint-Malo ou la Normandie, rejoignez Guernesey en ferry ou en avion. Des liaisons saisonnières directes existent selon les années : vérifiez les compagnies avant de réserver.", img: { src: '/brittany-ferries-guernsey.webp', alt: "Le ferry rapide Brittany Ferries Voyager arrivant à Saint-Pierre-Port, à Guernesey", w: 1200, h: 650 }, link: { href: 'https://www.brittany-ferries.fr/', label: 'Brittany Ferries : horaires et réservations' } },
+      { h: 'De Guernesey à Sercq', p: "Le bateau met environ 45 à 55 minutes. Les horaires changent selon la saison et la météo : consultez-les à l'avance et gardez de la marge pour le retour.", img: { src: '/sark-shipping.webp', alt: "Le Corsaire de Sercq, bateau d'Isle of Sark Shipping, le long du quai", w: 1200, h: 650 }, link: { href: 'https://www.sarkshipping.gg/', label: 'Isle of Sark Shipping : horaires et billets' } },
       { h: "À l'arrivée", p: "Le bateau accoste au port de Maseline. Un tracteur avec remorque monte les visiteurs jusqu'au village, le point de départ des balades, des vélos et des calèches." },
     ] },
   { key: 'todo', lang: 'fr', path: 'a-faire', nav: 'À faire',
@@ -49,8 +49,8 @@ export const pages: Page[] = [
     h1: 'Getting to Sark',
     lead: 'Sark is reached by boat, almost always via Guernsey.',
     sections: [
-      { h: 'From France', p: 'From Saint-Malo or Normandy, reach Guernsey by ferry or plane. Direct seasonal sailings exist in some years, so check with the operators before booking.', img: { src: '/brittany-ferries-guernsey.webp', alt: 'The Brittany Ferries fast ferry Voyager arriving at St Peter Port, Guernsey', w: 1200, h: 650 } },
-      { h: 'From Guernsey to Sark', p: 'The crossing takes roughly 45 to 55 minutes. Timetables change with the season and the weather, so check ahead and leave slack for your return.' },
+      { h: 'From France', p: 'From Saint-Malo or Normandy, reach Guernsey by ferry or plane. Direct seasonal sailings exist in some years, so check with the operators before booking.', img: { src: '/brittany-ferries-guernsey.webp', alt: 'The Brittany Ferries fast ferry Voyager arriving at St Peter Port, Guernsey', w: 1200, h: 650 }, link: { href: 'https://www.brittany-ferries.co.uk/', label: 'Brittany Ferries: timetables and bookings' } },
+      { h: 'From Guernsey to Sark', p: 'The crossing takes roughly 45 to 55 minutes. Timetables change with the season and the weather, so check ahead and leave slack for your return.', img: { src: '/sark-shipping.webp', alt: 'The Corsaire de Sercq, an Isle of Sark Shipping boat, alongside the quay', w: 1200, h: 650 }, link: { href: 'https://www.sarkshipping.gg/', label: 'Isle of Sark Shipping: timetables and tickets' } },
       { h: 'On arrival', p: 'Boats dock at Maseline Harbour. A tractor-drawn trailer takes visitors up to the village, the starting point for walks, bikes and carriages.' },
     ] },
   { key: 'todo', lang: 'en', path: 'en/things-to-do', nav: 'Things to do',

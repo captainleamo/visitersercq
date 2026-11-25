@@ -44,7 +44,7 @@ const t = ui[p.lang];
     <h1>{p.h1}</h1>
     <p class="lead">{p.lead}</p>
     {p.sections.map((s) => (
-      <section><h2>{s.h}</h2><div><p>{s.p}</p>{s.img && <img class="fig" src={s.img.src} alt={s.img.alt} width={s.img.w} height={s.img.h} loading="lazy" />}</div></section>
+      <section><h2>{s.h}</h2><div><p>{s.p}</p>{s.link && <p class="ext"><a href={s.link.href} rel="noopener">{s.link.label} →</a></p>}{s.img && <img class="fig" src={s.img.src} alt={s.img.alt} width={s.img.w} height={s.img.h} loading="lazy" />}</div></section>
     ))}
   </main>
   <footer>
@@ -73,6 +73,7 @@ const t = ui[p.lang];
   section { display:grid; gap:.5rem 3rem; padding-block:1.75rem; border-top:1px solid #1d2a3033; }
   h2 { font:500 1.4rem/1.2 'Bricolage Grotesque', sans-serif; margin:0; }
   section p { margin:0; max-width:40rem; }
+  .ext { margin-top:.75rem !important; font-weight:600; }
   .fig { display:block; width:100%; max-width:40rem; height:auto; margin-top:1.25rem; border-radius:.25rem; }
   @media (min-width:48rem) { section { grid-template-columns:16rem 1fr; } }
   footer { padding-block:3rem; font-size:.95rem; color:var(--granite); border-top:1px solid #1d2a3033; }
