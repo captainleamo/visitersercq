@@ -9,7 +9,7 @@ export const pages: Page[] = [
     sections: [
       { h: 'Pourquoi venir', p: "Falaises, criques, jardins et chemins creux : l'île se découvre au rythme des sabots et des vagues. Pas de voitures, très peu de bruit, et une vraie vie de village à l'arrivée." },
       { h: 'Se déplacer', p: "Tout se fait sans moteur privé : marche, location de vélos, ou tour de l'île en calèche. Comptez une journée pour faire le tour des grands points de vue." },
-      { h: 'Combien de temps rester', p: "Une journée suffit pour un premier aperçu. Pour les étoiles, les sentiers côtiers et le calme du soir, une ou deux nuits changent tout.", link: { href: 'https://www.simplysark.co.uk/en/visit-sark/where-to-stay', label: 'Où dormir à Sercq (site en anglais)' } },
+      { h: 'Combien de temps rester', p: "Une journée suffit pour un premier aperçu. Pour les étoiles, les sentiers côtiers et le calme du soir, une ou deux nuits changent tout.", link: { href: 'https://www.simplysark.co.uk/fr/visiter-sark/o%C3%B9-loger', label: 'Où dormir à Sercq' } },
     ] },
   { key: 'getting', lang: 'fr', path: 'venir', nav: 'Venir à Sercq',
     title: 'Comment aller à Sercq depuis la France et Guernesey',
@@ -30,7 +30,7 @@ export const pages: Page[] = [
       { h: 'À pied et à vélo', p: "La Coupée, étroite crête reliant Grande et Petite Sercq, offre l'un des plus beaux panoramas. Les chemins sont plats au centre, plus raides vers les criques." },
       { h: 'En calèche', p: "Le tour de l'île en calèche est le moyen le plus simple de tout voir sans fatigue. Réservez à l'avance en haute saison." },
       { h: 'Criques et grottes', p: "Port du Moulin et les grottes de Gouliot sont à voir à marée basse. Vérifiez les horaires des marées avant de descendre." },
-      { h: 'Jardins de La Seigneurie', p: "Des jardins clos abrités du vent, parfaits pour une pause au milieu d'une journée de marche.", img: { src: '/sark-gardens.webp', alt: "Un couple se promène main dans la main dans une allée de jardin bordée de murs en pierre et de massifs fleuris", w: 1391, h: 927 } },
+      { h: 'Jardins de La Seigneurie', p: "Des jardins clos abrités du vent, parfaits pour une pause au milieu d'une journée de marche." },
       { h: 'Le ciel étoilé', p: "Sercq a été la première île au monde labellisée Dark Sky. Par temps dégagé, la Voie lactée se voit à l'œil nu." },
     ] },
   { key: 'home', lang: 'en', path: 'en', nav: 'Home',
@@ -62,7 +62,7 @@ export const pages: Page[] = [
       { h: 'On foot and by bike', p: 'La Coupée, the narrow ridge joining Greater and Little Sark, is one of the best views on the island. Paths are flat in the centre and steeper near the coves.' },
       { h: 'By carriage', p: 'A carriage tour is the easiest way to see everything without tiring. Book ahead in high season.' },
       { h: 'Coves and caves', p: 'Port du Moulin and the Gouliot caves are best at low tide. Check tide times before heading down.' },
-      { h: 'La Seigneurie gardens', p: 'Walled gardens sheltered from the wind, ideal for a pause in the middle of a day of walking.', img: { src: '/sark-gardens.webp', alt: 'A couple walks hand in hand along a garden path lined with stone walls and flower borders', w: 1391, h: 927 } },
+      { h: 'La Seigneurie gardens', p: 'Walled gardens sheltered from the wind, ideal for a pause in the middle of a day of walking.' },
       { h: 'Dark skies', p: 'Sark was the first island in the world designated a Dark Sky community. On clear nights the Milky Way is visible to the naked eye.' },
     ] },
 ];
