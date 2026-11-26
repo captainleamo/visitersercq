@@ -29,7 +29,7 @@ export const pages: Page[] = [
     sections: [
       { h: 'À pied et à vélo', p: "La Coupée, étroite crête reliant Grande et Petite Sercq, offre l'un des plus beaux panoramas. Les chemins sont plats au centre, plus raides vers les criques.", img: { src: '/la-coupee.webp', alt: "Des promeneurs sur La Coupée, la crête étroite qui relie Grande et Petite Sercq, entre falaises et mer", w: 1200, h: 650 } },
       { h: 'En calèche', p: "Le tour de l'île en calèche est le moyen le plus simple de tout voir sans fatigue. Réservez à l'avance en haute saison.", img: { src: '/sark-carriages.webp', alt: "Des chevaux attelés à des calèches, à l'arrêt devant un bâtiment en pierre à horloge", w: 1200, h: 649 }, link: { href: 'https://sarkcarriages.co.uk', label: 'Calèches de Sercq : tours et réservations' } },
-      { h: 'Criques et grottes', p: "Port du Moulin et les grottes de Gouliot sont à voir à marée basse. Vérifiez les horaires des marées avant de descendre." },
+      { h: 'Criques et grottes', p: "Port du Moulin et les grottes de Gouliot sont à voir à marée basse. Vérifiez les horaires des marées avant de descendre.", img: { src: '/sark-coves.webp', alt: "Falaises couvertes de lande et pitons rocheux émergeant d'une mer calme et bleue", w: 1200, h: 650 } },
       { h: 'Jardins de La Seigneurie', p: "Des jardins clos abrités du vent, parfaits pour une pause au milieu d'une journée de marche.", img: { src: '/la-seigneurie.webp', alt: "Les jardins fleuris de La Seigneurie, entourés de murs en pierre, devant la tour de la maison", w: 1200, h: 650 } },
       { h: 'Le ciel étoilé', p: "Sercq a été la première île au monde labellisée Dark Sky. Par temps dégagé, la Voie lactée se voit à l'œil nu." },
     ] },
@@ -61,7 +61,7 @@ export const pages: Page[] = [
     sections: [
       { h: 'On foot and by bike', p: 'La Coupée, the narrow ridge joining Greater and Little Sark, is one of the best views on the island. Paths are flat in the centre and steeper near the coves.', img: { src: '/la-coupee.webp', alt: 'Walkers on La Coupée, the narrow ridge joining Greater and Little Sark, between cliffs and sea', w: 1200, h: 650 } },
       { h: 'By carriage', p: 'A carriage tour is the easiest way to see everything without tiring. Book ahead in high season.', img: { src: '/sark-carriages.webp', alt: 'Harnessed horses and carriages waiting in front of a stone building with a clock tower', w: 1200, h: 649 }, link: { href: 'https://sarkcarriages.co.uk', label: 'Sark Carriages: tours and bookings' } },
-      { h: 'Coves and caves', p: 'Port du Moulin and the Gouliot caves are best at low tide. Check tide times before heading down.' },
+      { h: 'Coves and caves', p: 'Port du Moulin and the Gouliot caves are best at low tide. Check tide times before heading down.', img: { src: '/sark-coves.webp', alt: 'Heather-covered cliffs and rock stacks rising from a calm blue sea', w: 1200, h: 650 } },
       { h: 'La Seigneurie gardens', p: 'Walled gardens sheltered from the wind, ideal for a pause in the middle of a day of walking.', img: { src: '/la-seigneurie.webp', alt: 'The flower gardens of La Seigneurie, enclosed by stone walls, in front of the house tower', w: 1200, h: 650 } },
       { h: 'Dark skies', p: 'Sark was the first island in the world designated a Dark Sky community. On clear nights the Milky Way is visible to the naked eye.' },
     ] },
