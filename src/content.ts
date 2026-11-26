@@ -27,7 +27,7 @@ export const pages: Page[] = [
     h1: 'Que faire à Sercq',
     lead: 'Quelques idées pour remplir une journée, ou deux.',
     sections: [
-      { h: 'À pied et à vélo', p: "La Coupée, étroite crête reliant Grande et Petite Sercq, offre l'un des plus beaux panoramas. Les chemins sont plats au centre, plus raides vers les criques." },
+      { h: 'À pied et à vélo', p: "La Coupée, étroite crête reliant Grande et Petite Sercq, offre l'un des plus beaux panoramas. Les chemins sont plats au centre, plus raides vers les criques.", img: { src: '/la-coupee.webp', alt: "Des promeneurs sur La Coupée, la crête étroite qui relie Grande et Petite Sercq, entre falaises et mer", w: 1200, h: 650 } },
       { h: 'En calèche', p: "Le tour de l'île en calèche est le moyen le plus simple de tout voir sans fatigue. Réservez à l'avance en haute saison." },
       { h: 'Criques et grottes', p: "Port du Moulin et les grottes de Gouliot sont à voir à marée basse. Vérifiez les horaires des marées avant de descendre." },
       { h: 'Jardins de La Seigneurie', p: "Des jardins clos abrités du vent, parfaits pour une pause au milieu d'une journée de marche." },
@@ -59,7 +59,7 @@ export const pages: Page[] = [
     h1: 'Things to do on Sark',
     lead: 'A few ideas to fill a day, or two.',
     sections: [
-      { h: 'On foot and by bike', p: 'La Coupée, the narrow ridge joining Greater and Little Sark, is one of the best views on the island. Paths are flat in the centre and steeper near the coves.' },
+      { h: 'On foot and by bike', p: 'La Coupée, the narrow ridge joining Greater and Little Sark, is one of the best views on the island. Paths are flat in the centre and steeper near the coves.', img: { src: '/la-coupee.webp', alt: 'Walkers on La Coupée, the narrow ridge joining Greater and Little Sark, between cliffs and sea', w: 1200, h: 650 } },
       { h: 'By carriage', p: 'A carriage tour is the easiest way to see everything without tiring. Book ahead in high season.' },
       { h: 'Coves and caves', p: 'Port du Moulin and the Gouliot caves are best at low tide. Check tide times before heading down.' },
       { h: 'La Seigneurie gardens', p: 'Walled gardens sheltered from the wind, ideal for a pause in the middle of a day of walking.' },
